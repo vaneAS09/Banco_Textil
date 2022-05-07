@@ -44,10 +44,13 @@ public class NewPost extends AppCompatActivity {
     private MaterialButton btnPost;
 
     ArrayAdapter<String> typeAdapter;
+    
+    //Declaro las variables que necesito para cargar la imagen
     private Button image;
     private StorageReference textilStorage;
     private static final int GALLERY_INTENT = 1;
 
+    //Crear una nueva instancia Oncreate para pemitir que el botón abra una galería y me permita seleccionar una imagen
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,7 +70,7 @@ public class NewPost extends AppCompatActivity {
             }
         });
 
-
+// ****************************************************************************
         PostData = FirebaseDatabase.getInstance().getReference();
 
         selectBase = findViewById(R.id.selectBase2);
@@ -188,6 +191,8 @@ public class NewPost extends AppCompatActivity {
         }
     }
 
+    
+    // Enviar la fotografía al storage
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
