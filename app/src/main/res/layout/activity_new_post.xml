@@ -197,7 +197,8 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/app_bar" />
-
+    
+//Agregué un botón adicional que puede ser modificado
     <Button
         android:id="@+id/imagen"
         android:layout_width="wrap_content"
